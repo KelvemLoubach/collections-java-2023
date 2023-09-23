@@ -46,6 +46,16 @@ public class CatalogoLivros {
         return catalogoLivros.size();
     }
 
+    public Livro pesquisaTitulo(String titulo){
+        Livro livroTitulo =null;
+        for(Livro l : catalogoLivros){
+            if(l.getTitulo().equalsIgnoreCase(titulo)){
+                livroTitulo = l;
+            }
+        }
+        return livroTitulo;
+    }
+
     @Override
     public String toString() {
         return "CatalogoLivros{" +
