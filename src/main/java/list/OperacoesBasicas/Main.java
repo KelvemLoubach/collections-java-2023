@@ -16,6 +16,6 @@ public class Main {
 
         System.out.println("O número total de tarefas é: " + listaTarefas.obterNumeroTarefas());
 
-        listaTarefas.imprimirTarefas();
+        System.out.println(listaTarefas.toString());
     }
 }

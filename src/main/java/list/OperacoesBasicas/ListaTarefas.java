@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListaTarefas {
 
-    private List<Tarefas> tarefasList;
+    private List<Tarefa> tarefasList;
 
     public  ListaTarefas(){
         this.tarefasList = new ArrayList<>();
@@ -13,12 +13,12 @@ public class ListaTarefas {
     }
 
     public void adicionarTarefa(String descricao){
-        tarefasList.add(new Tarefas(descricao));
+        tarefasList.add(new Tarefa(descricao));
     }
 
     public void removerTarefa(String remover){
-        List<Tarefas> removerTarefasList = new ArrayList<>();
-        for(Tarefas t : tarefasList){
+        List<Tarefa> removerTarefasList = new ArrayList<>();
+        for(Tarefa t : tarefasList){
             if(t.getDescricao().equalsIgnoreCase(remover)){
                 removerTarefasList.add(t);
             }
@@ -31,7 +31,13 @@ public class ListaTarefas {
     }
 
     public void imprimirTarefas(){
-        System.out.println(tarefasList);
+        System.out.println(tarefasList.toString());
     }
 
+    @Override
+    public String toString() {
+        return "ListaTaref" +
+                "tarefasList" + tarefasList +
+                '}';
+    }
 }
