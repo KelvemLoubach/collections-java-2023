@@ -51,6 +51,7 @@ public class CatalogoLivros {
         for(Livro l : catalogoLivros){
             if(l.getTitulo().equalsIgnoreCase(titulo)){
                 livroTitulo = l;
+                break;
             }
         }
         return livroTitulo;

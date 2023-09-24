@@ -22,4 +22,11 @@ public class Livro {
     public int getAnoLancamento() {
         return anoLancamento;
     }
+
+    @Override
+    public String toString() {
+        return "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", anoLancamento=" + anoLancamento;
+    }
 }
